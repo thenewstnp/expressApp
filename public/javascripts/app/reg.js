@@ -40,11 +40,7 @@ $(function () {
 
     })
 
-    $(".btn").eq(0).on("click", function () {
-        location.href = "/login";
-    })
-
-    addBorderColor();
+    addBorderColor(".form_item");
 
 });
 
@@ -57,12 +53,12 @@ function emptyValue(data) {
     $("#reg_rePassword").val("");
 }
 
-function addBorderColor() {
-    $(".form_item").focus(function () {
+function addBorderColor(el) {
+    $(el).focus(function () {
         $(this).css("border-color", "rgb(30, 95, 153)");
     });
 
-    $(".form_item").blur(function () {
+    $(el).blur(function () {
         $(this).css("border-color", "rgb(82, 89, 97)");
     });
 }

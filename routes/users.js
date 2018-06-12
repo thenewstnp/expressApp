@@ -19,7 +19,7 @@ router.get('/', function (req, res, next) {
   res.send('respond with a resource');
 });
 
-/**用户登录 */
+/**用户注册 */
 router.post('/register', function (req, res, next) {
   var username = req.body.username;
 
@@ -27,7 +27,7 @@ router.post('/register', function (req, res, next) {
 
   var repassword = req.body.repassword;
 
-  if (username == "" || password == "") {
+  if (username == "" || password == "" || repassword == "") {
 
     resJson.code = 1;
 
